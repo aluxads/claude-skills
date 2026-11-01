@@ -12,6 +12,7 @@ Free skills for Claude Code, built by Aluxads, a B2B growth agency. The focus is
 - `secret-ledger`: names only check of env files and repos for leaked secrets, with scan, lint-env, intake and selftest.
 - `conversion-tracking-audit`: audits GA4 key events, Google Ads conversion actions and offline readiness, scored report with a fix list.
 - `search-term-review`: joins Google Ads search terms to CRM lead quality, lag aware, proposes negatives for sign off.
+- `ux-laws`: named UX laws table plus measured button, form and mobile specs, for screen audits and build order.
 
 ## Install
 
@@ -74,6 +75,10 @@ Pulls Google Ads search terms with cost and conversions, joins them to CRM outco
 
 Scripts: `scripts/search-terms.mjs` (GAQL pull to CSV), `scripts/join-crm.mjs` (pure node join and classification). Template: `report-template.md`.
 
+### ux-laws
+
+A table of named UX laws (Fitts, Hick, Jakob and others) with the measured button, form and mobile specs that go with them. Use it to audit one screen into a findings table, or as a build order for a new screen, form, login or mobile layout. No scripts; the skill is `SKILL.md` plus a `references/` folder.
+
 ## Install
 
 Copy a skill folder into `~/.claude/skills/`:
@@ -85,6 +90,7 @@ cp -R serp-teardown ~/.claude/skills/
 cp -R gsd-mode ~/.claude/skills/
 cp -R image-process ~/.claude/skills/
 cp -R secret-ledger ~/.claude/skills/
+cp -R ux-laws ~/.claude/skills/
 ```
 
 Restart Claude Code. The skills load by name and by the trigger phrases in each `SKILL.md`.
